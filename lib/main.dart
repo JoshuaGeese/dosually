@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+final List<String> entries = <String>['A','B','C'];
+final List<int> colorCodes = <int>[600,500,100];
 void main() => runApp(MaterialApp(
   home: Dosoally(),
   theme: ThemeData(
@@ -55,72 +56,43 @@ class _DosoallyState extends State<Dosoally> {
 
 
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Expanded(
-              child: Card(
-                //color: Colors.black,
-                margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-                child: DefaultTabController(
-                  length: 2,
-                  child:TabBar(
-                    tabs: [
-                      Tab(icon: Icon(Icons.assignment)),
-                      Tab(icon: Icon(Icons.autorenew)),
-                    ],
-                  ),
+        child: Card(
+          margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
+          child: Column(
+            children: <Widget>[
+              Text(
+                'Task',
+                style: TextStyle(
+                  fontSize: 25.0,
                 ),
               ),
-            ),
-
-            Divider(
-              height: 10.0,
-            ),
-
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      RaisedButton(
-                        onPressed: () {},
-                        child: Text('Tasks'),
-
-                      ),
-                      RaisedButton(
-                        onPressed: () {},
-                        child: Text('Routinen')
-                        ,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      RaisedButton(
-                        onPressed: () {},
-                        child: Text('Tasks'),
-
-                      ),
-                      RaisedButton(
-                        onPressed: () {},
-                        child: Text('Routinen')
-                        ,
-                      ),
-                    ],
-                  ),
-                ],
+              ListView.separated(
+                shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index){
+                    return Container(
+                      height: 50,
+                      color: Colors.amber[colorCodes[index]],
+                      child: Center(
+                              child: Text(
+                                      'Entry ${entries[index]}',
+                                      style: TextStyle(
+                                        fontFamily: 'Roboto',
+                                      ),
+                                      ),
+                              ),
+                    );
+                  },
+                  separatorBuilder: (BuildContext context, int idex) => const Divider(),
+                  itemCount: entries.length,
               ),
-
-              ),
-              // Hier möglicherweise GridView verwenden?
-          ],
+            ],
+          ),
         ),
         ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.add),
+      ),
       );
 
   }
