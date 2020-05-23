@@ -71,13 +71,13 @@ flutter:
     - family: Roboto
       fonts:
         - asset: fonts/Roboto-Thin.ttf
-        - asset: fonts/Roboto-ExtraLight.ttf
+  #      - asset: fonts/Roboto-ExtraLight.ttf
         - asset: fonts/Roboto-Light.ttf
         - asset: fonts/Roboto-Regular.ttf
         - asset: fonts/Roboto-Medium.ttf
-        - asset: fonts/Roboto-SemiBold.ttf
+  #      - asset: fonts/Roboto-SemiBold.ttf
         - asset: fonts/Roboto-Bold.ttf
-        - asset: fonts/Roboto-ExtraBold.ttf
+  #      - asset: fonts/Roboto-ExtraBold.ttf
         - asset: fonts/Roboto-Black.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
