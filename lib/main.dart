@@ -22,6 +22,7 @@ void main() => runApp(MaterialApp(
     // iOS transition for Android to get sliding animation instead of fading upwards animation
     pageTransitionsTheme: PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
   ),
+  title: 'Dosually',
 
 ));
 
