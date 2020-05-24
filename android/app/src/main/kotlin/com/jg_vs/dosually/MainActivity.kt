@@ -1,4 +1,4 @@
-package com.jg_vs.dosoally
+package com.jg_vs.dosually
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

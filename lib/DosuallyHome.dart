@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:dosoally/DosuallyTaskList.dart';
-import 'package:dosoally/DosuallyRoutineList.dart';
-import 'package:dosoally/DosuallyStatistics.dart';
-import 'package:dosoally/DosuallyGoals.dart';
+import 'package:dosually/DosuallyTaskList.dart';
+import 'package:dosually/DosuallyRoutineList.dart';
+import 'package:dosually/DosuallyStatistics.dart';
+import 'package:dosually/DosuallyGoals.dart';
 
 class DosuallyHome extends StatefulWidget {
   @override

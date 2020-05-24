@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:dosoally/DosuallyHome.dart';
+import 'package:dosually/DosuallyHome.dart';
 
 
 

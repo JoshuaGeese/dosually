@@ -170,13 +170,13 @@
       "languageVersion": "2.3"
     },
     {
-      "name": "dosoally",
+      "name": "dosually",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-05-23T10:46:45.111695Z",
+  "generated": "2020-05-24T09:52:53.306406Z",
   "generator": "pub",
   "generatorVersion": "2.7.2"
 }
