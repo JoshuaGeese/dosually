@@ -53,6 +53,8 @@ class DosuallyHomeState extends State<DosuallyHome> {
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: Colors.black,
         unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
+        showUnselectedLabels: false ,
 
         onTap: onTabTapped,
         currentIndex: _currentIndex,
