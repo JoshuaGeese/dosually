@@ -83,10 +83,11 @@ class ToDoListState extends State<ToDoList> {
   Widget _buildTodoList() {
     return new ListView.builder(
       shrinkWrap: true,
+      itemCount: _todoItems.length,
       itemBuilder: (context, index) {
-        if(index < _todoItems.length) {
+        //if(index < _todoItems.length) {
           return _buildTodoItem(_todoItems[index]);
-        }
+        //}
       },
     );
   }
