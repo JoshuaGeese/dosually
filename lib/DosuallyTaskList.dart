@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+/*
 final List<String> entries = <String>['A','B','C'];
 final List<int> colorCodes = <int>[600,500,100];
 
@@ -60,4 +60,80 @@ class _DosuallyTaskListState extends State<DosuallyTaskList> {
     );
   }
 }
+*/
+
+
+
+
+class ToDoList extends StatefulWidget {
+  @override
+  createState() => new ToDoListState();
+}
+
+class ToDoListState extends State<ToDoList> {
+  List<String> _todoItems = [];
+
+  void _addTodoItem(){
+    setState(() {
+      int index = _todoItems.length;
+      _todoItems.add('Item ' + index.toString());
+    });
+  }
+
+  Widget _buildTodoList() {
+    return new ListView.builder(
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        if(index < _todoItems.length) {
+          return _buildTodoItem(_todoItems[index]);
+        }
+      },
+    );
+  }
+
+
+
+  Widget _buildTodoItem(String todoText) {
+    return new ListTile(
+      title: new Text(todoText),
+    );
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Center(
+          child: Card(
+            margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
+            child: Column(
+              children: <Widget>[
+                Text(
+                  'Task',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                  ),
+                ),
+                _buildTodoList(),
+              ],
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 20,
+          right: 20,
+          child: FloatingActionButton(
+            onPressed: _addTodoItem,
+            tooltip: 'Add task',
+            child: Icon(Icons.add),
+          ),
+        )
+      ],
+    );
+  }
+
+  }
+
+
 

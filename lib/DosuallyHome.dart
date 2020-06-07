@@ -15,7 +15,7 @@ class DosuallyHome extends StatefulWidget {
 class DosuallyHomeState extends State<DosuallyHome> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    DosuallyTaskList(),
+    ToDoList(),
     DosuallyRoutineList(),
     DosuallyStatistics(),
     DosuallyGoals(),
