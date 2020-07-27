@@ -23,7 +23,6 @@ void main() => runApp(MaterialApp(
     pageTransitionsTheme: PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
   ),
   title: 'Dosually',
-
 ));
 
 
